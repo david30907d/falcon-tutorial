@@ -1,13 +1,13 @@
+from udicOpenData.stopwords import rmsw
+
 import falcon
 
-
-class HelloWorldResource:
-
-    def on_get(self, request, response):
-
-        response.media = ('Hello World from Falcon Python 3.6 app with' +
-                          ' Gunicorn running in a container.')
+from app.tfidf import TFIDFRESOURCE
 
 
-app = falcon.API()
-app.add_route('/', HelloWorldResource())
+
+
+app = application = falcon.API()
+
+tfr = TFIDFRESOURCE()
+app.add_route('/tfidf', tfr)

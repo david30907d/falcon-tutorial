@@ -1,0 +1,9 @@
+falcon==1.4.1
+gunicorn
+requests
+numpy
+scipy
+udicOpenData
+webargs
+line_profiler
+pymongo
